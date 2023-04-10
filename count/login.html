@@ -1,0 +1,183 @@
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Fitindex</title>
+    <link rel="stylesheet" href="C:\Users\21655\Desktop\fitness\count\assets\css\style.css">
+
+    
+</head>
+<body>
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <video autoplay muted loop id="bg-video">
+    <source src="assets/images/gym-video2.mp4" type="video/mp4" />
+  </video>
+  <div class="form">
+      
+    <ul class="tab-group">
+      <li class="tab active"><a href="#signup">Sign Up</a></li>
+      <li class="tab"><a href="#login">Log In</a></li>
+    </ul>
+    <div class="tab-content">
+      
+      <div id="signup">   
+        <h1>Join us !</h1>
+      
+        <form action="/" method="post">
+      
+          <div class="top-row">
+            <div class="field-wrap">
+              <label>
+                   First Name<span class="req">*</span>
+               </label>
+             <input type="text" required autocomplete="off" />
+           </div>
+    
+           <div class="field-wrap">
+              <label>
+                   Last Name<span class="req">*</span>
+               </label>
+               <input type="text"required autocomplete="off"/>
+           </div>
+          </div>
+
+          <div class="field-wrap">
+              <label>
+                    Email Address<span class="req">*</span>
+               </label>
+               <input type="email"required autocomplete="off"/>
+           </div>
+      
+          <div class="field-wrap">
+             <label>
+                 Set A Password<span class="req">*</span>
+             </label>
+             <input type="password"required autocomplete="off"/>
+           </div>
+      
+          <button type="submit" class="button button-block"/>Get Started</button>
+      
+        </form>
+
+      </div>
+    
+      <div id="login">   
+         <h1>Welcome Back!</h1>
+      
+         <form action="/" method="post">
+      
+        <div class="field-wrap">
+            <label>
+                 Email Address<span class="req">*</span>
+             </label>
+            <input type="email"required autocomplete="off"/>
+         </div>
+      
+        <div class="field-wrap">
+           <label>
+                Password<span class="req">*</span>
+             </label>
+            <input type="password"required autocomplete="off"/>
+         </div>
+      
+        <p class="forgot"><a href="#">Forgot Password?</a></p>
+      
+         <button class="button button-block"/>Log In</button>
+      
+       </form>
+
+     </div>
+    
+   </div>
+
+  
+
+
+
+<script>
+var forms = document.querySelectorAll('.form');
+forms.forEach(function(form) {
+  var inputs = form.querySelectorAll('input, textarea');
+  inputs.forEach(function(input) {
+    input.addEventListener('keyup', function(e) {
+      var label = input.previousElementSibling;
+      if (input.value === '') {
+        label.classList.remove('active', 'highlight');
+      } else {
+        label.classList.add('active', 'highlight');
+      }
+    });
+    
+    input.addEventListener('blur', function(e) {
+      var label = input.previousElementSibling;
+      if (input.value === '') {
+        label.classList.remove('active', 'highlight');
+      } else {
+        label.classList.remove('highlight');
+      }
+    });
+    
+    input.addEventListener('focus', function(e) {
+      var label = input.previousElementSibling;
+      if (input.value === '') {
+        label.classList.remove('highlight');
+      } else {
+        label.classList.add('highlight');
+      }
+    });
+  });
+});
+var tabLinks = document.querySelectorAll('.tab a');
+tabLinks.forEach(function(tabLink) {
+  tabLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    var parent = tabLink.parentNode;
+    parent.classList.add('active');
+    var siblings = parent.parentNode.children;
+    for (var i = 0; i < siblings.length; i++) {
+      if (siblings[i] !== parent) {
+        siblings[i].classList.remove('active');
+      }
+    }
+    var target = tabLink.getAttribute('href');
+    var tabContents = document.querySelectorAll('.tab-content > div');
+    tabContents.forEach(function(tabContent) {
+      if (tabContent !== target) {
+        tabContent.style.display = 'none';
+      }
+    });
+    document.querySelector(target).style.display = 'block';
+  });
+});
+</script>
+   <!-- jQuery -->
+   <script src="assets/js/jquery-2.1.0.min.js"></script>
+
+   <!-- Bootstrap -->
+   <script src="assets/js/popper.js"></script>
+   <script src="assets/js/bootstrap.min.js"></script>
+
+   <!-- Plugins -->
+   <script src="assets/js/scrollreveal.min.js"></script>
+   <script src="assets/js/waypoints.min.js"></script>
+   <script src="assets/js/jquery.counterup.min.js"></script>
+   <script src="assets/js/imgfix.min.js"></script> 
+   <script src="assets/js/mixitup.js"></script> 
+   <script src="assets/js/accordions.js"></script>
+   
+   <!-- Global Init -->
+   <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
+
+

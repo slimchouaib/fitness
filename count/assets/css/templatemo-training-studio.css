@@ -252,7 +252,7 @@ header
 }
 
 .header-area .main-nav .logo {
-  line-height: 80px;
+  line-height: 110px;
   color: #fff;
   margin-top:-15px;
   margin-left: -18px;
@@ -694,7 +694,10 @@ features
   font-weight: 600;
   text-transform: capitalize;
 }
+.feature-item .right-content p {
+  color:#EB455F;
 
+}  
 .feature-item .right-content a.text-button {
   margin-top: 7px;
   display: inline-block;
@@ -748,6 +751,7 @@ Our Classes
 
 #our-classes {
   margin-bottom: 140px;
+  margin-top: -30px;
 }
 
 #tabs ul {
@@ -820,13 +824,22 @@ Our Classes
   border-radius: 5px;
 }
 .tabs-content h4 {
-  font-size: 23px;
+  font-size: 33px;
   font-weight: 700;
   color: #2B3467;
   letter-spacing: 0.5px;
   margin-bottom: 20px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
+.tabs-content h6 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #62addc;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
 .tabs-content p {
   font-size: 14px;
   color: #5b5151;
@@ -851,24 +864,24 @@ schedule
 #schedule table {
   width: 100%;
   text-align: center;
-  border: 1px solid #fff;
+  border: 1px solid #EB455F;
 }
 
 #schedule table tbody {
-  border-top: 1px solid #fff; 
+  border-top: 1px solid #EB455F; 
 }
 
 #schedule table tbody tr {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #EB455F;
 }
 
 #schedule table tbody tr td {
-  border-right: 1px solid #fff;
+  border-right: 1px solid #EB455F;
   height: 100px;
 }
 
 #schedule table tr td {
-  color: #fff;
+  color: #EDE7F6;
   font-size: 13px;
   text-transform: capitalize;
   font-weight: 500;
@@ -921,7 +934,7 @@ schedule
 }
 #schedule .filters ul li.active,
 #schedule .filters ul li:hover {
-  color: #2B3467;
+  color: #EB455F;
 }
 #schedule .filters-content {
   margin-top: 50px;
@@ -945,6 +958,7 @@ trainers
 */
 
 #trainers .trainer-item {
+  margin-top: -80px;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
@@ -1002,15 +1016,13 @@ contact
 --------------------------------------------- 
 */
 
-#contact-us {
-  margin-top: 140px;
-}
+ 
 
-#contact-us .container-fluid .col-lg-6 {
+.container-fluid .col-lg-6 {
   padding: 0px;
 }
 
-#contact-us .contact-form {
+.contact-form {
   padding: 80px;
   background-image: url(../images/contact-bg.jpg);
   background-position: center center;
@@ -1018,7 +1030,7 @@ contact
   background-size: cover;
 }
 
-#contact-us .contact-form #contact {
+.contact-form {
   background-color: #fff;
   padding: 40px;
   border-radius: 5px;
@@ -1085,167 +1097,112 @@ contact
 footer
 --------------------------------------------- 
 */
-footer {
-  text-align: center;
-  padding: 30px 0px;
-}
 
-footer p {
-  color: #232d39;
-  font-size: 13px;
-}
 
-footer p a {
+
+
+
+footer{
+  
+  width: 100%;
+  min-height: 350px;
+  max-height: auto;
+  padding: 80px;
+  background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.10)),url(../images/slide-01.jpg);
+  background-position: 15% 25%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 100px;
+  clear: both;
+}
+footer .footer-wrap{
+  width: 80%;
+  margin: 0 auto;
+  padding-left: 9%;
+  color: white;
+}
+.widgetFooter{
+  width: calc(85%/3);
+  height: auto;
+  float: left;
+  padding: 2.5%;
+  text-align: left;
+}
+h4.uppercase{
+  text-transform: uppercase;
+}
+ul#footerUsefulLink, ul#footerMediaLinks{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  line-height: 40px;
+  text-transform: capitalize;
+}
+ul#footerUsefulLink li, ul#footerMediaLinks li{
   cursor: pointer;
-  color: #ed563b;
+  /* transition: border-bottom 3s ease-in; */
+}
+ul#footerUsefulLink li:hover .usefulLinksIcons, ul#footerUsefulLink li:hover a{
+   color: #00CED1;
+   /* border-bottom: 1px solid red; */
+}
+ul#footerMediaLinks li:hover span.fb, ul#footerMediaLinks li:hover a.fb { color: #3b5998; }
+ul#footerMediaLinks li:hover span.twit, ul#footerMediaLinks li:hover a.twit { color: #1DA1F2; }
+ul#footerMediaLinks li:hover span.insta, ul#footerMediaLinks li:hover a.insta { color: #ffc838; }
+ul#footerMediaLinks li:hover span.git, ul#footerMediaLinks li:hover a.git { color: #f1502f; }
+
+div#footerLogo img{
+  width: 100%;
+  margin-top: 50px;
+  margin-left: -35px
 }
 
-footer p a:hover {
-  color: #ed563b;
+@media (max-width:800px){
+  footer .footer-wrap{
+    width: 100%;
+    padding: 0;
+  }
+  .widgetFooter:not(:nth-of-type(2)){
+    width: calc(90%/2);
+    text-align: center;
+    font-size: 0.9em;
+  }
+  .widgetFooter:nth-of-type(2){
+    display: none;
+  }
 }
-
-
-
-/* 
----------------------------------------------
-preloader
---------------------------------------------- 
-*/
-
-.js-preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #232d39;
-    display: -webkit-box;
+@media (max-width:600px){
+  .widgetFooter:not(:nth-of-type(2)){
+    text-align: left;
+  }
+}
+@media (max-width:500px){
+  footer{
+    min-height: auto;
+  }
+  .widgetFooter:not(:nth-of-type(2)){
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  ul#footerUsefulLink, ul#footerMediaLinks{
     display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-    opacity: 1;
-    visibility: visible;
-    z-index: 9999;
-    -webkit-transition: opacity 0.25s ease;
-    transition: opacity 0.25s ease;
-}
-
-.js-preloader.loaded {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-}
-
-@-webkit-keyframes dot {
-    50% {
-        -webkit-transform: translateX(96px);
-        transform: translateX(96px);
-    }
-}
-
-@keyframes dot {
-    50% {
-        -webkit-transform: translateX(96px);
-        transform: translateX(96px);
-    }
-}
-
-@-webkit-keyframes dots {
-    50% {
-        -webkit-transform: translateX(-31px);
-        transform: translateX(-31px);
-    }
-}
-
-@keyframes dots {
-    50% {
-        -webkit-transform: translateX(-31px);
-        transform: translateX(-31px);
-    }
-}
-
-.preloader-inner {
-    position: relative;
-    width: 142px;
-    height: 40px;
-    background: #232d39;
-}
-
-.preloader-inner .dot {
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    top: 12px;
-    left: 15px;
-    background: #fff;
-    border-radius: 50%;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    -webkit-animation: dot 2.8s infinite;
-    animation: dot 2.8s infinite;
-}
-
-.preloader-inner .dots {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    margin-top: 12px;
-    margin-left: 31px;
-    -webkit-animation: dots 2.8s infinite;
-    animation: dots 2.8s infinite;
-}
-
-.preloader-inner .dots span {
-    display: block;
+  }
+  ul#footerUsefulLink li, ul#footerMediaLinks li{
     float: left;
-    width: 16px;
-    height: 16px;
-    margin-left: 16px;
-    background: #fff;
-    border-radius: 50%;
-}
-
-
-/* 
----------------------------------------------
-responsive
---------------------------------------------- 
-*/
-
-
-@media (max-width: 992px) {
-
-  .main-banner .caption h2 {
-    font-size: 64px;
+    flex: 1;
+    text-align: center;
+    font-size: 1.5em;
   }
-  #features {
-    margin-bottom: 110px;
+  ul#footerUsefulLink li a, ul#footerMediaLinks li a{
+    display: none;
   }
-  #features .feature-item {
-    margin-bottom: 30px;
+  ul#footerUsefulLink li:hover, ul#footerUsefulLink li:hover .usefulLinksIcons, ul#footerUsefulLink li:hover a{
+     color: white;
+     background-color: #00CED1;
   }
-  #our-classes .tabs-content {
-    margin-left: 0px;
-    margin-top: 30px;
-  }
-  .trainer-item {
-    margin-bottom: 30px;
-  }
-  #contact-us #map {
-    margin-bottom: -7px;
-  }
-  #contact-us .contact-form {
-    padding: 30px;
-  }
-  #contact-us .contact-form #contact {
-    padding: 30px;
-  }
-
-}
-
-@media (max-width: 450px) {
-  .feature-item .right-content a.text-button {
-    margin-left: 130px;
-  }
+  ul#footerMediaLinks li.media1:hover, ul#footerMediaLinks li:hover span.fb, ul#footerMediaLinks li:hover a.fb { background-color: #3b5998; color: white; }
+  ul#footerMediaLinks li.media2:hover, ul#footerMediaLinks li:hover span.twit, ul#footerMediaLinks li:hover a.twit { background-color: #1DA1F2; color: white; }
+  ul#footerMediaLinks li.media3:hover, ul#footerMediaLinks li:hover span.insta, ul#footerMediaLinks li:hover a.insta { background-color: #ffc838; color: white; }
+  ul#footerMediaLinks li.media4:hover, ul#footerMediaLinks li:hover span.git, ul#footerMediaLinks li:hover a.git { background-color: #f1502f; color: white; }
 }

@@ -1,0 +1,49 @@
+#loading, #results {
+  display: none;
+}
+#loading {
+  width: 100%;
+}
+
+
+  
+#bg-video {
+  position: fixed;
+  right: 0;
+  z-index:-1;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+.container{
+   background: rgb(2 49 86 / 90%);
+   padding: 40px;
+   max-width: 600px;
+   font-family:Arial, Helvetica, sans-serif;
+
+margin: 40px auto;
+border-radius: 20px;
+box-shadow: 0 4px 10px 4px rgb(2 10 15 / 30%)
+}
+.colorch{
+  background-color: #bad7e9e6;
+  border-radius: 20px;
+  font-family:Arial, Helvetica, sans-serif;
+
+} 
+.police{
+  width:140px;
+  height: 90px;
+  font-size:40px;
+  font-family:"Times New Roman", Times, serif;
+  margin-left : 180px;
+  margin-bottom:-10px;
+  
+
+} 
+.shape{
+  width: 140px;
+  height: 50px;
+  background-color:  rgb(2 49 86 / 90%)
+
+}
